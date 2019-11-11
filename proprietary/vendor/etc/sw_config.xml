@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?><sunwave:Config xmlns:sunwave="http://www.sunwavecorp.com/some-location" Environment="TEE" platform="项目信息: 请填写项目信息">
+  <feature>
+    <key_emulation cname="按键功能开关" default="false" desc="默认：false" format="boolean" useable="true">true</key_emulation>
+    <navigation cname="导航功能开关" default="false" desc="默认：false" format="boolean" useable="true">false</navigation>
+    <esd_mode cname="ESD 保护模式" default="1" desc="ESD 保护模式。默认：触发式(1)" format="array" options="关闭 ESD 保护(0)|触发式(1)|轮询式(2)|触发式和轮询式并用(3)" useable="true" values="0|1|2|3">1</esd_mode>
+    <self_learning cname="模板自学习开关" default="true" desc="默认：true" format="boolean" useable="true">true</self_learning>
+    <unique_finger cname="重复手指录入判断开关" default="true" desc="默认：true" format="boolean" useable="true">true</unique_finger>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </feature>
+  
+  <algo>
+    <enrolling_num_max cname="单模板录入最大次数" default="15" desc="大于10。默认: 15" format="array" options="10次|11次|12次|13次|14次|15次|16次|17次|18次|19次|20次" useable="true" values="10|11|12|13|14|15|16|17|18|19|20">15</enrolling_num_max>
+    <enrolling_samples cname="单模板录入次数" default="0" desc="不得大于单模板录入最大次数。默认: 动态计算" format="array" options="动态计算|12次|13次|14次|15次" useable="true" values="0|12|13|14|15">0</enrolling_samples>
+    <max_fingers_per_user cname="每个用户拥有指纹数量" default="5" desc="单用户最大指纹模板数量。默认: 5个" format="array" options="3个|4个|5个|6个|7个" useable="true" values="3|4|5|6|7">5</max_fingers_per_user>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </algo>
+    
+  <device>
+    
+    <key_code cname="默认按键键值" default="4" desc="按键功能打开后，上报的按键值，注意要与驱动同步。默认：SF_KEY_F11" format="array" options="SF_KEY_HOME|SF_KEY_MENU|SF_KEY_BACK|SF_KEY_F11|SF_KEY_ENTER|SF_KEY_UP|SF_KEY_LEFT|SF_KEY_RIGHT|SF_KEY_DOWN|SF_KEY_WAKEUP|SF_KEY_F12" useable="true" values="1|2|3|4|5|6|7|8|9|10|11">4</key_code>
+    
+    
+    
+    
+  </device>
+  
+  
+  
+  
+  
+  <navigation>    
+    <mode cname="导航方向模式选择" default="3" desc="导航方向模式选择。默认：SF_NAV_MODE_AUTO" format="array" options="SF_NAV_MODE_ALL|SF_NAV_MODE_LMR|SF_NAV_MODE_UMD|SF_NAV_MODE_AUTO" useable="true" values="0|1|2|3">3</mode>
+    <direct cname="导航方向映射" default="UDLR" desc="导航方向映射。默认：UDLR" format="string" useable="true">UDLR</direct>
+    <longkey_en cname="导航长按开关" default="true" desc="默认：true" format="boolean" useable="true">true</longkey_en>
+    <frm_num_min cname="导航最小采集帧数" default="5" desc="导航最小采集帧数[3,10]。默认: 5" format="integer" max="10" min="3" useable="true">5</frm_num_min>
+    <frm_num_max cname="导航最大采集帧数" default="200" desc="导航最大采集帧数[5,200]。默认: 200" format="integer" max="200" min="5" useable="true">200</frm_num_max>
+    <thresh_x cname="导航x方向灵敏度" default="18" desc="导航x方向灵敏度[10,30]。默认: 18" format="integer" max="30" min="10" useable="true">18</thresh_x>
+    <thresh_y cname="导航y方向灵敏度" default="18" desc="导航y方向灵敏度[10,30]。默认: 18" format="integer" max="30" min="10" useable="true">18</thresh_y>
+    
+  </navigation>
+  
+  <diagnosis>
+    <img_invciper_data cname="导出原始图像" default="false" desc="需依赖 导出指纹图像。默认：false" format="boolean" useable="true">false</img_invciper_data>
+    <data_dumping cname="导出指纹图像" default="false" desc="默认：false" format="boolean" useable="true">false</data_dumping>
+    <log_level cname="调试信息等级" default="2" desc="LOG 打印等级。默认：LOG_LEVEL_INF" format="array" options="LOG_LEVEL_INF|LOG_LEVEL_ERR" useable="true" values="2|3">2</log_level>
+  </diagnosis>
+  
+  
+  
+  <customer>
+    
+    <msg_base cname="消息基准值" default="1000" desc="自定义消息基准值。默认: 1000" format="integer" max="2000" min="1000" useable="true">1000</msg_base>
+    
+    
+  </customer>
+  
+</sunwave:Config>
